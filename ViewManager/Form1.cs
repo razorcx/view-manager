@@ -321,5 +321,19 @@ namespace ViewManager
 				ViewHandler.HideView(view);
 			}
 		}
+
+		private void listBoxViews_DoubleClick(object sender, EventArgs e)
+		{
+			var viewName = listBoxViews.SelectedItem.ToString();
+			var currentViews = ViewHandler.GetAllViews();
+			while (currentViews.MoveNext())
+			{
+				var currentView = currentViews.Current;
+				if (currentView.Name == viewName)
+				{
+					ViewHandler.ShowView(currentView);
+				}
+			}
+		}
 	}
 }

@@ -152,6 +152,7 @@
 			this.listBoxViews.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
 			this.listBoxViews.Size = new System.Drawing.Size(341, 228);
 			this.listBoxViews.TabIndex = 9;
+			this.listBoxViews.DoubleClick += new System.EventHandler(this.listBoxViews_DoubleClick);
 			// 
 			// buttonDeleteView
 			// 
